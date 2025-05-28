@@ -1,7 +1,7 @@
-export default function LandingPage() {
+export default function AboutPage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1>Landing Page</h1>
+      <h1>About Page</h1>
     </div>
   );
 }
