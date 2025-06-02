@@ -8,7 +8,7 @@ export default function LandingPage() {
         <p className="mb-4 text-center font-primary text-2xl tracking-wide text-balance text-primary">
           I&apos;m a software engineer with a passion for building products that are both functional and beautiful.
         </p>
-        <div className="flex justify-around">
+        <div className="flex w-full justify-evenly">
           <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary">Contacts</button>
           <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary">Resume</button>
         </div>
