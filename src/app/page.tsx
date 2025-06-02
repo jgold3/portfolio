@@ -9,7 +9,7 @@ export default function LandingPage() {
           I&apos;m a software engineer with a passion for building products that are both functional and beautiful.
         </p>
         <div className="flex justify-around">
-          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary">Contact</button>
+          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary">Contacts</button>
           <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary">Resume</button>
         </div>
       </div>
