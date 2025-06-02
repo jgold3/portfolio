@@ -5,11 +5,14 @@ interface NavButtonProps {
   href: string;
 }
 
+// const className =
+//   "relative font-primary text-2xl leading-none font-bold tracking-wide text-primary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full";
+
 export function NavButton({ children, href }: NavButtonProps) {
   return (
     <Link
       href={href}
-      className="relative font-poetsen-one text-2xl font-extrabold tracking-wide text-primary text-shadow-sm after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
+      className="font-primary text-2xl leading-none font-bold tracking-wide text-primary hover:text-secondary"
     >
       {children}
     </Link>

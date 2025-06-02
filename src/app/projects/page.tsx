@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
+    <div className="flex h-[calc(100vh-5rem)] flex-col items-center justify-center">
       <h1>Projects Page</h1>
     </div>
   );

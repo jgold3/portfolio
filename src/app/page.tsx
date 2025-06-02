@@ -1,11 +1,20 @@
 export default function LandingPage() {
   return (
-    <section className="grid h-screen grid-cols-2">
-      {/* <div className="bg-red-500">
-        <h1 className="text-4xl">Landing Page</h1>
+    <section className="hidden sm:grid sm:h-[calc(100vh-5rem)] sm:grid-cols-2 sm:px-16">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="mb-4 text-center font-primary text-5xl tracking-wide text-balance text-primary">
+          Hello, my name is Josh
+        </h1>
+        <p className="mb-4 text-center font-primary text-2xl tracking-wide text-balance text-primary">
+          I&apos;m a software engineer with a passion for building products that are both functional and beautiful.
+        </p>
+        <div className="flex justify-around">
+          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary">Contact</button>
+          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary">Resume</button>
+        </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <svg className="w-xs h-xs" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg className="h-xs w-xs" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M512.002 512.002m-491.986 0a491.986 491.986 0 1 0 983.972 0 491.986 491.986 0 1 0-983.972 0Z"
             fill="#FDDF6D"
@@ -38,7 +47,7 @@ export default function LandingPage() {
           <path d="M517.952 935.084m-20.014 0a20.014 20.014 0 1 0 40.028 0 20.014 20.014 0 1 0-40.028 0Z" fill="" />
           <path d="M631.182 35.768m-20.014 0a20.014 20.014 0 1 0 40.028 0 20.014 20.014 0 1 0-40.028 0Z" fill="" />
         </svg>
-      </div> */}
+      </div>
     </section>
   );
 }
