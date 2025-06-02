@@ -1,6 +1,13 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact | Josh Goldsmith",
+  description: "Contact Josh Goldsmith",
+};
+
 export default function ContactPage() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex h-screen flex-col items-center justify-center">
       <h1>Contact Page</h1>
     </div>
   );

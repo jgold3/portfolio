@@ -1,1 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-londrina-shadow: "Londrina Shadow", sans-serif;
+  --font-rampart-one: "Rampart One", sans-serif;
+  --font-poetsen-one: "Poetsen One", sans-serif;
+  --color-primary: #274c77;
+  --color-secondary: #6096ba;
+  --color-accent: #a3cef1;
+  --color-background: #e7ecef;
+  --color-foreground: #000000;
+}
