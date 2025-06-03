@@ -7,7 +7,7 @@ export function Header() {
       <div className="flex items-center sm:items-end">
         <Link
           href="/"
-          className="font-rampart-one text-2xl font-extrabold tracking-wide text-primary text-shadow-sm hover:text-secondary sm:text-4xl"
+          className="font-rampart-one text-2xl font-extrabold tracking-wide text-primary transition-colors text-shadow-sm hover:text-secondary sm:text-4xl"
         >
           JOSH GOLDSMITH
         </Link>

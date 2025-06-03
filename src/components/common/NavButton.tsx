@@ -12,7 +12,7 @@ export function NavButton({ children, href }: NavButtonProps) {
   return (
     <Link
       href={href}
-      className="font-primary text-2xl leading-none font-bold tracking-wide text-primary hover:text-secondary"
+      className="font-primary text-2xl leading-none font-bold tracking-wide text-primary transition-colors hover:text-secondary"
     >
       {children}
     </Link>
