@@ -1,6 +1,6 @@
 // Common components
-export * from "./common/NavButton";
-export * from "./common/MenuButton";
+export * from "./NavButton";
+export * from "./MenuButton";
 
 // Layout components
-export * from "./layout/Header";
+export * from "./Header";
