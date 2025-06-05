@@ -126,7 +126,7 @@ export default function AboutPage() {
           quod, voluptates nam, ab placeat voluptas quas! Expedita consequatur, necessitatibus sed accusamus laudantium
           aperiam quod. Porro beatae incidunt eos dolore.
         </TimelineItem>
-        <TimelineItem year="Sept.2022" title="Going to Booz Allen Hamilton 💼">
+        <TimelineItem year="Sept. 2022" title="Going to Booz Allen Hamilton 💼">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ipsam dolores fugiat ullam praesentium
           minus necessitatibus autem assumenda vel laborum consequuntur, sit quaerat veniam quasi, laboriosam commodi
           eos non voluptates! Magnam esse repudiandae reiciendis incidunt, earum culpa error ipsa porro ipsum veritatis
@@ -150,7 +150,7 @@ export default function AboutPage() {
           quod, voluptates nam, ab placeat voluptas quas! Expedita consequatur, necessitatibus sed accusamus laudantium
           aperiam quod. Porro beatae incidunt eos dolore.
         </TimelineItem>
-        <TimelineItem year="Sept.2022" title="What's next? 🤔">
+        <TimelineItem year="Jun. 2025" title="What's next? 🤔">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ipsam dolores fugiat ullam praesentium
           minus necessitatibus autem assumenda vel laborum consequuntur, sit quaerat veniam quasi, laboriosam commodi
           eos non voluptates! Magnam esse repudiandae reiciendis incidunt, earum culpa error ipsa porro ipsum veritatis

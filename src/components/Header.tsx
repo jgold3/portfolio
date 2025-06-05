@@ -3,7 +3,7 @@ import { NavButton, MenuButton } from "@/components";
 
 export function Header() {
   return (
-    <header className="flex h-20 justify-between gap-4 px-4 py-4 sm:px-16">
+    <header className="sticky top-0 z-50 flex h-20 justify-between gap-4 border-primary bg-background px-4 py-4 sm:px-16">
       <div className="flex items-center sm:items-end">
         <Link
           href="/"
