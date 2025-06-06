@@ -12,3 +12,11 @@
   --color-background: #ffffff;
   --color-foreground: #000000;
 }
+
+.dark {
+  --color-primary: #a3cef1;
+  --color-secondary: #6096ba;
+  --color-accent: #274c77;
+  --color-background: #0d1117;
+  --color-foreground: #f0f6fc;
+}

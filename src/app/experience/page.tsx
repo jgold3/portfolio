@@ -9,7 +9,7 @@ export default function ExperiencePage() {
   return (
     <div className="flex p-5 sm:p-10">
       <div className="h-full w-full">
-        <div className="flex flex-col">
+        <div className="flex flex-col font-primary text-primary">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam facilis dolorem, aspernatur omnis sed
             voluptate reprehenderit dicta rem expedita facere eaque! Est sunt cum odio ullam, eveniet earum dolores

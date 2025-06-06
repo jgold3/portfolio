@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NavButton, MenuButton } from "@/components";
+import { NavButton, MenuButton, DarkModeToggle } from "@/components";
 
 export function Header() {
   return (
@@ -17,8 +17,12 @@ export function Header() {
         <NavButton href="/experience">Experience</NavButton>
         <NavButton href="/projects">Projects</NavButton>
         <NavButton href="/contact">Contact</NavButton>
+        <div className="flex items-center">
+          <DarkModeToggle />
+        </div>
       </div>
-      <div className="flex items-center sm:hidden">
+      <div className="flex items-center gap-2 sm:hidden">
+        <DarkModeToggle />
         <MenuButton />
       </div>
     </header>
