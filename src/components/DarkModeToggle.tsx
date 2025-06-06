@@ -7,14 +7,6 @@ function DarkModeToggle() {
   const { theme, mounted, toggleTheme } = useTheme();
   const className = "text-primary hover:fill-secondary";
 
-  // const handleToggle = () => {
-  //   if (theme === "system") {
-  //     setTheme(resolvedTheme === "dark" ? "light" : "dark");
-  //   } else {
-  //     setTheme(theme === "dark" ? "light" : "dark");
-  //   }
-  // };
-
   // Show loading state until mounted
   if (!mounted) {
     return (
