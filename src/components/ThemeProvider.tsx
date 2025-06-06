@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import { createContext, useContext, useLayoutEffect, useState, ReactNode } from "react";
 
 type Theme = "light" | "dark" | "system";
 
@@ -46,7 +46,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   };
 
   // Load theme from localStorage on mount
-  useEffect(() => {
+  useLayoutEffect(() => {
     const stored = localStorage.getItem("theme") as Theme;
     if (stored && ["light", "dark", "system"].includes(stored)) {
       setTheme(stored);
@@ -55,7 +55,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   }, []);
 
   // Apply theme to document
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!mounted) return;
 
     const root = document.documentElement;
@@ -73,7 +73,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   }, [theme, resolvedTheme, mounted]);
 
   // Listen for system theme changes
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!mounted) return;
 
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
