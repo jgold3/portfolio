@@ -1,1 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-rampart-one: "Rampart One", sans-serif;
+  --font-primary: "Roboto", sans-serif;
+  --color-primary: #274c77;
+  --color-secondary: #6096ba;
+  --color-accent: #a3cef1;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+}
+
+.dark {
+  --color-primary: #a3cef1;
+  --color-secondary: #6096ba;
+  --color-accent: #274c77;
+  --color-background: #0d1117;
+  --color-foreground: #f0f6fc;
+}
