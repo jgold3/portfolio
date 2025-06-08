@@ -17,10 +17,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               (function() {
                 try {
                   const stored = localStorage.getItem('theme');
-                  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  const shouldUseDark = stored === 'dark' || (stored !== 'light' && stored !== 'system' && !stored && systemPrefersDark) || (stored === 'system' && systemPrefersDark);
-                  if (shouldUseDark) {
+                  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  const useDark = stored === 'dark' || (!stored && systemDark) || (stored === 'system' && systemDark);
+                  if (useDark) {
                     document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
                   }
                 } catch(e) {}
               })();

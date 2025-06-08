@@ -89,6 +89,21 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, [mounted]);
 
+  // // Listen for theme changes in other tabs
+  useLayoutEffect(() => {
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === "theme") {
+        const newTheme = e.newValue as Theme;
+        if (!!newTheme && ["light", "dark", "system"].includes(newTheme)) {
+          setTheme(newTheme);
+        }
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
+
   // Always provide context, but include mounted state
   return <ThemeContext.Provider value={{ theme, mounted, toggleTheme }}>{children}</ThemeContext.Provider>;
 }
