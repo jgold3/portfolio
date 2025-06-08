@@ -5,9 +5,8 @@ import { Moon, Sun, MonitorCog } from "lucide-react";
 
 function DarkModeToggle() {
   const { theme, mounted, toggleTheme } = useTheme();
-  const className = "text-primary hover:fill-secondary transition-colors";
+  const className = "text-primary active:fill-secondary hover:fill-secondary transition-colors";
 
-  // Show loading state until mounted
   if (!mounted) {
     return (
       <span className="opacity-0" aria-hidden>

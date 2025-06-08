@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LandingPage() {
   return (
-    <section className="flex h-[calc(100dvh-5rem)] flex-col-reverse justify-center sm:grid sm:h-[calc(100vh-5rem)] sm:grid-cols-2 sm:px-16">
+    <section className="flex h-[calc(100svh-5rem)] flex-col-reverse justify-center sm:grid sm:h-[calc(100vh-5rem)] sm:grid-cols-2 sm:px-16">
       <div className="my-8 flex flex-col items-center justify-center">
         <p className="text-center font-primary text-xl tracking-wide text-balance text-primary">Hello, my name is</p>
         <h1 className="text-center font-primary text-6xl font-bold tracking-wide text-balance text-primary">
@@ -13,10 +13,10 @@ export default function LandingPage() {
           Full-Stack Developer
         </p>
         <div className="flex w-full justify-center gap-16">
-          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors hover:bg-secondary">
+          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors active:bg-secondary sm:hover:bg-secondary">
             Resume
           </button>
-          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors hover:bg-secondary">
+          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors active:bg-secondary sm:hover:bg-secondary">
             Contact
           </button>
         </div>
