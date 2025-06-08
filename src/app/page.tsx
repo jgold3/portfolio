@@ -1,5 +1,5 @@
 import Image from "next/image";
-//100dvh
+import Link from "next/link";
 
 export default function LandingPage() {
   return (
@@ -16,9 +16,12 @@ export default function LandingPage() {
           <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors active:bg-secondary sm:hover:bg-secondary">
             Resume
           </button>
-          <button className="rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors active:bg-secondary sm:hover:bg-secondary">
+          <Link
+            href="/contact"
+            className="rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors active:bg-secondary sm:hover:bg-secondary"
+          >
             Contact
-          </button>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center sm:mt-0">
