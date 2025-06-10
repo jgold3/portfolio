@@ -7,5 +7,5 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET() {
-  return NextResponse.redirect(new URL("/404", "http://localhost:3000"));
+  return NextResponse.redirect(new URL("/404", process.env.NEXT_PUBLIC_URL));
 }
