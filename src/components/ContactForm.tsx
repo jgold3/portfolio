@@ -20,7 +20,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="grid w-full max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
+    <div className="flex w-full flex-col gap-4 sm:grid sm:max-w-4xl sm:grid-cols-2">
       <input
         className="w-full rounded-md border border-primary px-4 py-2 font-primary text-primary placeholder:text-primary focus:ring-1 focus:ring-primary focus:outline-none sm:max-w-sm"
         type="text"
@@ -38,7 +38,7 @@ function ContactForm() {
         onChange={handleChange}
       />
       <textarea
-        className="col-span-2 h-72 max-h-72 w-full rounded-md border border-primary px-4 py-2 font-primary text-primary placeholder:text-primary focus:ring-1 focus:ring-primary focus:outline-none"
+        className="h-96 max-h-96 w-full rounded-md border border-primary px-4 py-2 font-primary text-primary placeholder:text-primary focus:ring-1 focus:ring-primary focus:outline-none sm:col-span-2 sm:h-72 sm:max-h-72"
         name="message"
         placeholder="Message"
         value={formData.message}
@@ -47,7 +47,7 @@ function ContactForm() {
       <button
         onClick={handleSubmit}
         disabled={isDisabled}
-        className="col-start-2 w-24 justify-self-end rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors active:bg-secondary sm:hover:bg-secondary"
+        className="ml-auto w-24 rounded-md border border-primary px-4 py-2 font-primary text-primary transition-colors active:bg-secondary sm:col-start-2 sm:justify-self-end sm:hover:bg-secondary"
       >
         Send
       </button>
