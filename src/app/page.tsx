@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LandingPage() {
   return (
-    <section className="flex h-[calc(100svh-5rem)] flex-col-reverse justify-center sm:grid sm:h-[calc(100vh-5rem)] sm:grid-cols-2 sm:px-16">
+    <div className="flex h-[calc(100dvh-5rem)] flex-col-reverse justify-center sm:grid sm:h-[calc(100vh-5rem)] sm:grid-cols-2 sm:px-16">
       <div className="my-8 flex flex-col items-center justify-center">
         <p className="text-center font-primary text-xl tracking-wide text-balance text-primary">Hello, my name is</p>
         <h1 className="text-center font-primary text-6xl font-bold tracking-wide text-balance text-primary">
@@ -29,6 +29,6 @@ export default function LandingPage() {
           <Image src="/me.png" alt="Picture of Josh Goldsmith" fill priority className="rounded-full" />
         </div>
       </div>
-    </section>
+    </div>
   );
 }

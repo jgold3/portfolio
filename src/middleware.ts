@@ -16,6 +16,8 @@ const BLOCKED_USER_AGENTS = [
   /wget/i,
   /httpie/i,
   /httpie/i,
+  /driftnet-crawler/i,
+  /zgrab/i,
 ];
 
 export function middleware(request: NextRequest) {

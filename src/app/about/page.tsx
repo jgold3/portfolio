@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="my-10 flex h-full w-full px-5 sm:px-10">
-      <div className="relative mr-6 pl-6">
+    <div className="my-10 flex h-full w-full px-5 sm:px-16">
+      <div className="relative mr-6">
         <div className="absolute top-0 left-1/2 h-full w-[2px] bg-primary"></div>
       </div>
       <div className="flex flex-grow flex-col space-y-20">
