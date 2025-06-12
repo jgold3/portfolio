@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
   if (!name || !email || !message) {
     return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
   }
-  console.log(csrfToken);
+  console.log(`csrfToken in contact route: ${csrfToken}`);
   if (!csrfToken) {
     return NextResponse.json({ message: "Missing CSRF token" }, { status: 403 });
   }

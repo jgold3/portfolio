@@ -1,18 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { useCsrfToken } from "@/hooks";
 
 type ContactFormProps = {
-  csrfToken: string;
+  csrfToken?: string;
 };
 
-function ContactForm({ csrfToken }: ContactFormProps) {
+function ContactForm({}: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
+  const csrfToken = useCsrfToken();
+
   const isDisabled = !formData.name || !formData.email || !formData.message;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

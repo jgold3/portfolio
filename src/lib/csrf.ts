@@ -14,7 +14,7 @@ export function generateCsrfToken(secret: string) {
 export async function verifyCsrfToken(token: string) {
   const cookieStore = await cookies();
   const secret = cookieStore.get("csrfSecret")?.value;
-  console.log(secret);
+  console.log(`secret in verifyCsrfToken: ${secret}`);
   if (!secret) {
     console.log("no secret");
     return false;
