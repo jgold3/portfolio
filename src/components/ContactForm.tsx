@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-function ContactForm() {
+type ContactFormProps = {
+  csrfToken: string;
+};
+
+function ContactForm({ csrfToken }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +24,11 @@ function ContactForm() {
 
     const response: { message: string } = await fetch("/api/contact", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-Token": csrfToken,
+      },
+      credentials: "include",
       body: JSON.stringify(formData),
     }).then((res) => res.json());
 
