@@ -11,6 +11,8 @@
   --color-accent: #a3cef1;
   --color-background: #ffffff;
   --color-foreground: #000000;
+
+  --breakpoint-3xl: 120rem;
 }
 
 .dark {
@@ -19,4 +21,8 @@
   --color-accent: #274c77;
   --color-background: #0d1117;
   --color-foreground: #f0f6fc;
+}
+
+.page-container {
+  @apply 3xl:max-w-[60vw] mx-auto w-full px-5 py-10 sm:px-16;
 }

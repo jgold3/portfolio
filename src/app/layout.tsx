@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-background antialiased">
+      <body className="mx-auto bg-background antialiased">
         <ThemeProvider>
           <Header />
           {children}
