@@ -14,7 +14,6 @@ export function Header() {
       </div>
       <div className="hidden sm:flex sm:items-end sm:gap-4">
         <NavButton href="/about">About</NavButton>
-        <NavButton href="/experience">Experience</NavButton>
         <NavButton href="/projects">Projects</NavButton>
         <NavButton href="/contact">Contact</NavButton>
         <div className="flex items-center">

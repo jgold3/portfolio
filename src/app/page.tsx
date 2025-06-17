@@ -26,7 +26,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center sm:mt-0">
-          <div className="relative h-64 w-64 rounded-full border-4 border-primary sm:h-128 sm:w-128">
+          <div className="relative h-64 w-64 rounded-full border-4 border-primary sm:h-96 sm:w-96 md:h-128 md:w-128">
             <Image
               src="/me.png"
               alt="Picture of Josh Goldsmith"
