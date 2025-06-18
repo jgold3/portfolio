@@ -3,13 +3,10 @@ import { NavButton, MenuButton, DarkModeToggle } from "@/components";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 flex h-20 justify-between gap-4 border-primary bg-background px-4 py-4 sm:px-16">
+    <header className="sticky top-0 z-50 flex h-20 justify-between gap-4 bg-background px-4 py-4 sm:px-16">
       <div className="flex items-center sm:items-end">
-        <Link
-          href="/"
-          className="font-rampart-one text-2xl font-extrabold tracking-wide text-primary transition-colors text-shadow-sm hover:text-secondary sm:text-4xl"
-        >
-          JOSH GOLDSMITH
+        <Link href="/" className="text-2xl font-bold text-shadow-sm sm:text-4xl">
+          joshgoldsmith.dev
         </Link>
       </div>
       <div className="hidden sm:flex sm:items-end sm:gap-4">

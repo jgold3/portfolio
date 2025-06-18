@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { Send } from "lucide-react";
 import { useCsrfToken } from "@/hooks";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 type ContactFormProps = {
   csrfToken?: string;
@@ -41,38 +46,30 @@ function ContactForm({}: ContactFormProps) {
   console.log(isLoading);
 
   return (
-    <div className="flex w-full flex-col gap-4 sm:grid sm:max-w-4xl sm:grid-cols-2">
-      <input
-        className="w-full rounded-md border border-primary px-4 py-2 font-primary text-primary shadow-md placeholder:text-primary focus:ring-1 focus:ring-primary focus:outline-none sm:max-w-sm dark:shadow-accent"
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <input
-        className="w-full rounded-md border border-primary px-4 py-2 font-primary text-primary shadow-md placeholder:text-primary focus:ring-1 focus:ring-primary focus:outline-none sm:max-w-sm sm:justify-self-end dark:shadow-accent"
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <textarea
-        className="h-96 max-h-96 min-h-32 w-full rounded-md border border-primary px-4 py-2 font-primary text-primary shadow-md placeholder:text-primary focus:ring-1 focus:ring-primary focus:outline-none sm:col-span-2 sm:h-72 sm:max-h-72 dark:shadow-accent"
-        name="message"
-        placeholder="Message"
-        value={formData.message}
-        onChange={handleChange}
-      />
-      <button
-        onClick={handleSubmit}
-        disabled={isDisabled}
-        className="ml-auto w-24 rounded-md border border-primary px-4 py-2 font-primary text-primary shadow-md transition-colors active:bg-secondary sm:col-start-2 sm:justify-self-end sm:hover:bg-secondary dark:shadow-accent"
-      >
-        Send
-      </button>
-    </div>
+    <Card className="w-full sm:w-4xl">
+      <CardHeader>
+        <CardTitle>Contact Me</CardTitle>
+        <CardDescription>
+          I&apos;m always looking for new opportunities and collaborations. If you have any questions or want to work
+          together, please fill out the form below, and I&apos;ll get back to you as soon as possible (probably).
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="flex w-full flex-col gap-4 sm:grid sm:max-w-4xl sm:grid-cols-2">
+        <Input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
+        <Input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+        <Textarea
+          className="h-96 max-h-96 min-h-32 sm:col-span-2 sm:h-72 sm:max-h-72"
+          name="message"
+          placeholder="Message"
+          value={formData.message}
+          onChange={handleChange}
+        />
+        <Button className="col-start-2 justify-self-end" size="lg" onClick={handleSubmit} disabled={isDisabled}>
+          Send
+          <Send />
+        </Button>
+      </CardContent>
+    </Card>
   );
 }
 

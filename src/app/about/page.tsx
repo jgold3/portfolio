@@ -8,10 +8,10 @@ type TimelineItemProps = {
 
 function TimelineItem({ year, title, children }: TimelineItemProps) {
   return (
-    <div className="font-primary tracking-wide text-balance text-primary">
-      <div className="mb-3 flex justify-between tracking-wide">
-        <h2 className="font-primary text-2xl font-semibold">{title}</h2>
-        <h2 className="font-primary text-2xl font-semibold">{year}</h2>
+    <div className="text-balance">
+      <div className="mb-3 flex justify-between">
+        <h2 className="text-2xl font-semibold">{title}</h2>
+        <h2 className="text-2xl font-semibold">{year}</h2>
       </div>
       <div className="w-full">{children}</div>
     </div>
