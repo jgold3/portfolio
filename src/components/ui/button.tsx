@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as motion from "motion/react-client";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -32,19 +33,30 @@ const buttonVariants = cva(
   }
 );
 
+const animateProps = {
+  whileTap: { scale: 0.95 },
+  whileHover: { scale: 1.1, transition: { duration: 0.3 } },
+};
+
 function Button({
   className,
   variant,
   size,
   asChild = false,
+  animate = false,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    animate?: boolean;
   }) {
   const Comp = asChild ? Slot : "button";
 
-  return <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />;
+  return (
+    <motion.div {...(animate && animateProps)}>
+      <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />
+    </motion.div>
+  );
 }
 
 export { Button, buttonVariants };

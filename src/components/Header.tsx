@@ -3,22 +3,8 @@ import { NavButton, MenuButton, DarkModeToggle } from "@/components";
 
 function Logo() {
   return (
-    <Link
-      href="/"
-      className="flex rounded-md border-2 border-primary text-2xl font-bold duration-200 hover:opacity-80 sm:text-4xl"
-    >
-      <p className="bg-primary px-1 py-0.5 text-primary-foreground">joshgoldsmith</p>
-      <div className="flex h-12 items-center justify-center bg-primary">
-        <div className="h-2 w-1 overflow-hidden">
-          <div className="h-2 w-2 rounded-full bg-primary-foreground"></div>
-        </div>
-      </div>
-      <div className="flex h-12 items-center justify-center">
-        <div className="h-2 w-1 overflow-hidden">
-          <div className="h-2 w-2 -translate-x-1 transform rounded-full bg-primary"></div>
-        </div>
-      </div>
-      <p className="px-1 py-0.5">dev</p>
+    <Link href="/" className="flex text-2xl font-bold duration-200 hover:opacity-80 sm:text-4xl">
+      JG
     </Link>
   );
 }

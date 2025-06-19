@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useCsrfToken = () => {
+export function useCsrfToken() {
   const [csrfToken, setCsrfToken] = useState<string>("");
 
   useEffect(() => {
@@ -13,4 +13,4 @@ export const useCsrfToken = () => {
   }, []);
 
   return csrfToken;
-};
+}

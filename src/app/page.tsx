@@ -1,24 +1,36 @@
+import * as motion from "motion/react-client";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Josh Goldsmith",
+  description: "Full-Stack Developer",
+};
+
 export default function LandingPage() {
   return (
-    <div className="page-container">
+    <motion.div
+      className="page-container"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex h-[calc(100dvh-10rem)] flex-col-reverse justify-center sm:grid sm:grid-cols-2">
         <div className="my-8 flex flex-col items-center justify-center">
           <p className="text-center text-xl text-balance">Hello, my name is</p>
           <h1 className="text-center text-6xl font-bold text-balance">Josh Goldsmith</h1>
           <p className="mb-6 text-center text-xl text-balance">Full-Stack Developer</p>
           <div className="flex w-full justify-center gap-8">
-            <Button className="duration-300 hover:-translate-y-1" size="lg" asChild>
+            <Button size="lg" asChild animate>
               <a href="/GoldsmithResume.pdf" download>
                 <Download />
                 Resume
               </a>
             </Button>
-            <Button className="duration-300 hover:-translate-y-1" variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild animate>
               <Link href="/contact">Contact</Link>
             </Button>
           </div>
@@ -35,6 +47,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

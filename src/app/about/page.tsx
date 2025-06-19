@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import { Metadata } from "next";
 
 type TimelineItemProps = {
@@ -8,13 +9,13 @@ type TimelineItemProps = {
 
 function TimelineItem({ year, title, children }: TimelineItemProps) {
   return (
-    <div className="text-balance">
+    <motion.div className="text-balance" variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
       <div className="mb-3 flex justify-between">
         <h2 className="text-2xl font-semibold">{title}</h2>
         <h2 className="text-2xl font-semibold">{year}</h2>
       </div>
       <div className="w-full">{children}</div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -30,7 +31,20 @@ export default function AboutPage() {
         <div className="relative mr-10">
           <div className="absolute top-0 left-1/2 h-full w-[2px] bg-primary" />
         </div>
-        <div className="flex flex-grow flex-col space-y-20">
+        <motion.div
+          className="flex flex-grow flex-col space-y-20"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.3,
+              },
+            },
+          }}
+        >
           <TimelineItem year="2013" title="My first taste of programming 👨🏼‍💻">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ipsam dolores fugiat ullam
             praesentium minus necessitatibus autem assumenda vel laborum consequuntur, sit quaerat veniam quasi,
@@ -181,7 +195,7 @@ export default function AboutPage() {
             placeat voluptas quas! Expedita consequatur, necessitatibus sed accusamus laudantium aperiam quod. Porro
             beatae incidunt eos dolore.
           </TimelineItem>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
