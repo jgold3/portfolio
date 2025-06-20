@@ -12,7 +12,7 @@ type ContactFormProps = {
   csrfToken?: string;
 };
 
-function ContactForm({}: ContactFormProps) {
+export function ContactForm({}: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -72,5 +72,3 @@ function ContactForm({}: ContactFormProps) {
     </Card>
   );
 }
-
-export default ContactForm;

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Header, ThemeProvider } from "@/components";
+import { Header, ThemeProvider, TooltipProvider } from "@/components";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="mx-auto bg-background antialiased">
         <ThemeProvider>
           <Header />
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
