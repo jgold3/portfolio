@@ -11,7 +11,8 @@ import {
   SiPostgresql,
   SiMysql,
 } from "react-icons/si";
-import { Card, CardContent, CardHeader, CardTitle, FlipCard, TimeLine } from "@/components";
+import { Card, CardContent, FlipCard, TimeLine } from "@/components";
+import * as motion from "motion/react-client";
 
 const techStack = [
   {
@@ -56,20 +57,35 @@ const techStack = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "About | Josh Goldsmith",
-  description: "A timeline of Josh Goldsmith's life",
-};
-
-export default function AboutPage() {
+function TechStack() {
   return (
-    <div className="page-container">
-      <div className="flex flex-col gap-8">
-        <TimeLine />
-        <Card>
-          <CardHeader>
-            <CardTitle>My Tech Stack</CardTitle>
-          </CardHeader>
+    <>
+      <div className="px-4 pt-16 pb-8 text-center text-foreground">
+        <motion.h1
+          className="mb-6 text-4xl font-light drop-shadow-lg md:text-6xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          My Tech Stack
+        </motion.h1>
+        <motion.p
+          className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          This is what I&pos;m comfortable building with. I&pos;m always looking to learn new things, so if you see
+          something here that you think I should know, let me know!
+        </motion.p>
+      </div>
+      <motion.div
+        className="flex justify-center"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
+        <Card className="w-5xl">
           <CardContent>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-5">
               {techStack.map(({ name, icon }) => (
@@ -80,7 +96,23 @@ export default function AboutPage() {
             </div>
           </CardContent>
         </Card>
+      </motion.div>
+    </>
+  );
+}
+
+export const metadata: Metadata = {
+  title: "About | Josh Goldsmith",
+  description: "A timeline of Josh Goldsmith's life",
+};
+
+export default function AboutPage() {
+  return (
+    <div className="page-container">
+      <div className="mb-16 flex min-h-[calc(100dvh-10rem)] flex-col gap-16">
+        <TechStack />
       </div>
+      <TimeLine />
     </div>
   );
 }

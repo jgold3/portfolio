@@ -53,19 +53,29 @@ const timelineItems = [
 function TimelineItem({ item, index }: { item: (typeof timelineItems)[number]; index: number }) {
   const isEven = index % 2 === 0;
   return (
-    <Card
-      className={cn(
-        "relative mb-12 ml-10 max-w-md md:mr-0 md:ml-0 lg:max-w-md",
-        isEven ? "md:mr-auto" : "md:ml-auto",
-        index === timelineItems.length - 1 ? "mb-0" : ""
-      )}
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      viewport={{
+        margin: "-50%", // Triggers earlier
+        once: true, // Only animates once
+      }}
     >
-      <CardHeader>
-        <CardTitle className="w-full">{item.title}</CardTitle>
-        <CardDescription>{item.date}</CardDescription>
-      </CardHeader>
-      <CardContent>{item.description}</CardContent>
-    </Card>
+      <Card
+        className={cn(
+          "relative mb-20 ml-10 max-w-md md:mr-0 md:ml-0 lg:max-w-md",
+          isEven ? "md:mr-auto" : "md:ml-auto",
+          index === timelineItems.length - 1 ? "mb-0" : ""
+        )}
+      >
+        <CardHeader>
+          <CardTitle className="w-full">{item.title}</CardTitle>
+          <CardDescription>{item.date}</CardDescription>
+        </CardHeader>
+        <CardContent>{item.description}</CardContent>
+      </Card>
+    </motion.div>
   );
 }
 
